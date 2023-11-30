@@ -8,8 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-class PolitenessData():
+class DownloadData():
     def __init__(self, data_url, target_path, data_file):
         """Download, preprocess, and plot politeness data from Bodo Winter
 
@@ -22,15 +21,6 @@ class PolitenessData():
         data_file : str
             name of file to which data should be saved.
 
-        Returns
-        -------
-        cwd : str
-            Information about the current working directory.
-        summary_stats : DataFrame
-            Summary statistics of the politeness data.
-        plot : plt.plot
-            Plot of the politeness data.
-
         """
         self.target_path = target_path
         self.data_url = data_url
@@ -42,13 +32,7 @@ class PolitenessData():
         self.set_cwd(self.target_path)
         # download data set from specified url
         self.download_data(self.data_url, file_name = self.data_file)
-        # read and preprocess data set
-        df, summary_stats = self.data_preprocessed(self.data_file)
-        # show summary statistics
-        print(summary_stats)
-        # plot data
-        self.plot_data(df)
-  
+        
     def set_cwd(self, target_path):
         """Set current working directory to desired local path
 
@@ -71,7 +55,7 @@ class PolitenessData():
         # check whether current working directory is indeed correct
         # if not: returns an error
         assert  current_wd == target_path, "Current working directory does not match with target directory"
-        return print("current working directory:", current_wd)
+    
     
     def download_data(self, data_url, file_name):
         """Download data from url
@@ -93,6 +77,36 @@ class PolitenessData():
         with open(file_name, "wb") as file:
             file.write(response.content)
             
+
+class PolitenessData():
+    def __init__(self, data_file):
+        """Download, preprocess, and plot politeness data from Bodo Winter
+
+        Parameters
+        ----------
+        data_file : str
+            name of file to which data should be saved.
+
+        Returns
+        -------
+        summary_stats : DataFrame
+            Summary statistics of the politeness data.
+        plot : plt.plot
+            Plot of the politeness data.
+
+        """
+        self.data_file = data_file
+        
+    def __call__(self):
+
+        # read and preprocess data set
+        df, summary_stats = self.data_preprocessed(self.data_file)
+        # show summary statistics
+        print(summary_stats)
+        # plot data
+        self.plot_data(df)
+  
+   
     # install pyarrow via pip install pyarrow
     def data_preprocessed(self, data_file):
         """Read and preprocess data 
@@ -166,16 +180,15 @@ target_path = pathlib.PureWindowsPath(r"C:\Users\flobo\OneDrive\Dokumente\Phd-te
 data_url = "http://www.bodowinter.com/tutorial/politeness_data.csv"    
 data_file = "pitch_data.csv"
 
-# initialize class and create a new instance
-pol_data = PolitenessData(data_url, target_path, data_file)
-
-help(PolitenessData)
-dir(PolitenessData)
+downloaded_data = DownloadData(data_url, target_path, data_file)
 # set working directory
-pol_data.set_cwd(target_path)
+downloaded_data.set_cwd(target_path)
 
 # download data set
-pol_data.download_data(data_url, data_file)
+downloaded_data.download_data(data_url, data_file)
+
+# initialize class and create a new instance
+pol_data = PolitenessData(data_file)
 
 # preprocess data set
 df, df_sum = pol_data.data_preprocessed(data_file)

@@ -17,11 +17,10 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-build docs output
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      - name: Deploy documentation to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: output/
-          force_orphan: true
+          branch: gh-pages                     # The branch the action should deploy to.
+          folder: docs/output                  # The folder the action should deploy.
+          git-config-name: Deployment Bot      # Name of the committer
+          git-config-email: deploy@github.com  # Email of the committer

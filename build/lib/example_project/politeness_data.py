@@ -154,6 +154,7 @@ class PolitenessData():
         matplotlib.plot
 
         """
+        
         # create color sequence for grouping variable 
         # (to be passed into plot)
         cols = np.where(df["attitude"] == "polite", "lightblue", "orange")
@@ -163,7 +164,7 @@ class PolitenessData():
         # plot mean values
         axs.scatter(df["gender"],df["mean_pitch"], c = cols,edgecolors='black')
         # plot additionally individual observations
-        sns.swarmplot(data = df,
+        sns.swarmplot(data = pd.DataFrame(df, columns = df.columns),
                     x = "gender", y = "frequency", 
                     hue = "attitude",
                     alpha = 0.4, ax=axs)

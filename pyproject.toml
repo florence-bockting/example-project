@@ -17,4 +17,4 @@ dependencies = ["matplotlib>=3.5.1",
                 "pathlib>=1.0"]
 
 [project.optional-dependencies]
-dev = ["pytest ~= 7.1.2"]
+dev = ["pytest ~= 7.3.1"]

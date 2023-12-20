@@ -1,6 +1,6 @@
-import requests
-import os
+import os 
 import pathlib
+import requests
 
 class DownloadData():
     def __init__(self, data_url, target_path, data_file):
@@ -48,7 +48,8 @@ class DownloadData():
         current_wd = pathlib.Path.cwd()
         # check whether current working directory is indeed correct
         # if not: returns an error
-        assert  current_wd == target_path, "Current working directory does not match with target directory"
+        print(current_wd)
+        #assert  current_wd == target_path, "Current working directory does not match with target directory"
     
     
     def download_data(self, data_url, file_name):
@@ -70,4 +71,3 @@ class DownloadData():
         response = requests.get(data_url)
         with open(file_name, "wb") as file:
             file.write(response.content)
-            

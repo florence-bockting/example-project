@@ -1,16 +1,51 @@
 Metadata-Version: 2.1
 Name: example-project
-Version: 0.0.1
+Version: 0.0.0
+Summary: First example project
+Home-page: https://github.com/florence-bockting/example-project
+Author: Florence Bockting
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11.7
+Classifier: Programming Language :: Python :: 3.12.0
 Requires-Python: >=3.6
-License-File: LICENSE.txt
-Requires-Dist: matplotlib>=3.5.1
-Requires-Dist: numpy>=1.15.1
-Requires-Dist: pandas>=1.3.5
-Requires-Dist: polars==0.19.19
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.23
+Requires-Dist: pandas>=1.4
+Requires-Dist: polars>=0.19.19
 Requires-Dist: pyarrow>=11.0.0
-Requires-Dist: Requests==2.31.0
-Requires-Dist: seaborn==0.11.2
-Requires-Dist: setuptools>=40.2.0
-Requires-Dist: pathlib>=1.0
-Provides-Extra: dev
-Requires-Dist: pytest~=7.1.2; extra == "dev"
+Requires-Dist: scipy>=1.8
+Requires-Dist: seaborn>=0.11
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: Requests>=2.31.0
+Provides-Extra: testing
+Requires-Dist: flake8>=3.9; extra == "testing"
+Requires-Dist: tox>=3.24; extra == "testing"
+Requires-Dist: pytest>=6.0; extra == "testing"
+Requires-Dist: pytest-cov>=2.10.0; extra == "testing"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.1.0; extra == "docs"
+Requires-Dist: sphinx-book-theme>=0.2.0; extra == "docs"
+Requires-Dist: numpydoc>=1.2.1; extra == "docs"
+Requires-Dist: myst_nb>=0.13.1; extra == "docs"
+Requires-Dist: sphinx_design>=0.4.1; extra == "docs"
+
+![Documentation](https://github.com/florence-bockting/example-project/actions/workflows/docs.yml/badge.svg)
+![Tests](https://github.com/florence-bockting/example-project/actions/workflows/tests.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+
+# Example project 
+
+This is an example project. 
+
+## Install
+will follow
+
+## Usage
+will follow
+
+## Contributing
+will follow
+
+## License 
+will follow

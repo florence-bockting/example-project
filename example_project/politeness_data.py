@@ -97,4 +97,4 @@ class PolitenessData():
         # relable x-axis
         axs.set_xticklabels(labels = ["Female", "Male"])
         axs.set_ylabel("pitch in Hz")
-        return (plt.show(), axs)
+        return (fig, axs)

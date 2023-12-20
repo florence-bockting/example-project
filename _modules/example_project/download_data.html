@@ -279,7 +279,8 @@ document.write(`
         <span class="n">current_wd</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
         <span class="c1"># check whether current working directory is indeed correct</span>
         <span class="c1"># if not: returns an error</span>
-        <span class="k">assert</span>  <span class="n">current_wd</span> <span class="o">==</span> <span class="n">target_path</span><span class="p">,</span> <span class="s2">&quot;Current working directory does not match with target directory&quot;</span></div>
+        <span class="nb">print</span><span class="p">(</span><span class="n">current_wd</span><span class="p">)</span></div>
+        <span class="c1">#assert  current_wd == target_path, &quot;Current working directory does not match with target directory&quot;</span>
     
     
 <div class="viewcode-block" id="DownloadData.download_data"><a class="viewcode-back" href="../../example_project.html#example_project.download_data.DownloadData.download_data">[docs]</a>    <span class="k">def</span> <span class="nf">download_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_url</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>

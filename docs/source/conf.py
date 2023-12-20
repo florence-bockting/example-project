@@ -21,7 +21,7 @@ extensions = [
     "sphinx.ext.viewcode",    # Include the source code in documentation
     "sphinx.ext.githubpages", # Build for GitHub pages
     "numpydoc",               # Support NumPy style docstrings
-    "myst_nb",                # For compiling Jupyter Notebooks into high quality documentation formats   
+    "myst_nb",                # For compiling Jupyter Notebooks into high quality documentation formats  
 ]
 
 templates_path = ['_templates']
@@ -34,7 +34,6 @@ exclude_patterns = []
 
 html_theme = 'sphinx_book_theme'
 html_title = 'Example Project'
-
 html_static_path = ['_static']
 
 
@@ -45,7 +44,6 @@ nb_execution_mode = "off"
 html_sourcelink_suffix = ""
 
 import os
-
 suppress_warnings = [
     f"autosectionlabel._examples/{filename.split('.')[0]}"
     for filename in os.listdir("notebooks/")

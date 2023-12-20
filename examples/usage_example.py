@@ -24,4 +24,3 @@ df, df_sum = pol_data.data_preprocessed(data_file)
 
 # plot data 
 _, axs = pol_data.plot_data(df)
-

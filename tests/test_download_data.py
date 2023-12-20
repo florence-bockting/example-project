@@ -13,8 +13,8 @@ def download_data_instance(tmp_path):
     return DownloadData(data_url=data_url, target_path=str(tmp_path), data_file=str(data_file))
 
 # Test the set_cwd method with different target paths
-@pytest.mark.parametrize("target_path", ["/home/runner/work/example-project/example-project/examples/data",
-                                         "/home/runner/work/example-project/example-project/tests"])
+@pytest.mark.parametrize("target_path", ["example-project/examples/data",
+                                         "example-project/tests"])
 
 #@pytest.mark.skip(reason="fails and I don't know why")
 def test_set_cwd(download_data_instance, target_path, capsys):

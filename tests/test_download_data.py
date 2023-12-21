@@ -12,19 +12,19 @@ def download_data_instance(tmp_path):
     data_file = tmp_path / "test_data.csv"
     return DownloadData(data_url=data_url, target_path=str(tmp_path), data_file=str(data_file))
 
-# Test the set_cwd method with different target paths
-@pytest.mark.parametrize("target_path", [os.chdir("/examples"),
-                                         os.chdir("/tests")])
+def test_set_cwd(download_data_instance, capsys):
+    # Call the set_cwd method
+    download_data_instance.set_cwd("examples")
 
-#@pytest.mark.skip(reason="fails and I don't know why")
-def test_set_cwd(download_data_instance, target_path, capsys):
-    print("HEEEERREEEE", os.getcwd())
-    download_data_instance.set_cwd(target_path)
     # Capture the printed output
     captured = capsys.readouterr()
 
     # Perform assertions on the printed output
-    assert pathlib.Path(captured.out.strip()).endswith(target_path)
+    expected_path = pathlib.Path("examples")
+    actual_path = pathlib.Path(captured.out.strip())
+
+    # Ensure the actual path ends with the expected path
+    assert actual_path.parts[-len(expected_path.parts):] == expected_path.parts
       
 #%% 
 

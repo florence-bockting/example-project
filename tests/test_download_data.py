@@ -13,7 +13,7 @@ def download_data_instance(tmp_path):
     return DownloadData(data_url=data_url, target_path=str(tmp_path), data_file=str(data_file))
 
 # Test the set_cwd method with different target paths
-@pytest.mark.parametrize("target_path", [os.chdir("~/examples/data"),
+@pytest.mark.parametrize("target_path", [os.chdir("~/examples"),
                                          os.chdir("~/tests")])
 
 #@pytest.mark.skip(reason="fails and I don't know why")

@@ -18,8 +18,8 @@ def download_data_instance(tmp_path):
 
 #@pytest.mark.skip(reason="fails and I don't know why")
 def test_set_cwd(download_data_instance, target_path, capsys):
+    print("HEREEEEEEE", os.getcwd())
     download_data_instance.set_cwd(target_path)
-    print(os.getcwd())
     # Capture the printed output
     captured = capsys.readouterr()
 

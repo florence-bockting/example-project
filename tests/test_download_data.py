@@ -24,7 +24,7 @@ def test_set_cwd(download_data_instance, target_path, capsys):
     captured = capsys.readouterr()
 
     # Perform assertions on the printed output
-    assert pathlib.Path(captured.out.strip()).suffix == pathlib.Path(target_path)
+    assert pathlib.Path(captured.out.strip()).endswith(target_path)
       
 #%% 
 

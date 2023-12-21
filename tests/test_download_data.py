@@ -13,11 +13,12 @@ def download_data_instance(tmp_path):
     return DownloadData(data_url=data_url, target_path=str(tmp_path), data_file=str(data_file))
 
 # Test the set_cwd method with different target paths
-@pytest.mark.parametrize("target_path", [os.chdir("~/examples"),
-                                         os.chdir("~/tests")])
+@pytest.mark.parametrize("target_path", [os.chdir("/examples"),
+                                         os.chdir("/tests")])
 
 #@pytest.mark.skip(reason="fails and I don't know why")
 def test_set_cwd(download_data_instance, target_path, capsys):
+    print("HEEEERREEEE", os.getcwd())
     download_data_instance.set_cwd(target_path)
     # Capture the printed output
     captured = capsys.readouterr()

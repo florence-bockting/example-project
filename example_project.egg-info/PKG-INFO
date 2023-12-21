@@ -9,7 +9,6 @@ Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.11.7
 Classifier: Programming Language :: Python :: 3.12.0
 Requires-Python: >=3.6
-Description-Content-Type: text/markdown
 Requires-Dist: numpy>=1.23
 Requires-Dist: pandas>=1.4
 Requires-Dist: polars>=0.19.19
@@ -19,7 +18,6 @@ Requires-Dist: seaborn>=0.11
 Requires-Dist: matplotlib>=3.5
 Requires-Dist: Requests>=2.31.0
 Provides-Extra: testing
-Requires-Dist: flake8>=3.9; extra == "testing"
 Requires-Dist: tox>=3.24; extra == "testing"
 Requires-Dist: pytest>=6.0; extra == "testing"
 Requires-Dist: pytest-cov>=2.10.0; extra == "testing"
@@ -29,23 +27,3 @@ Requires-Dist: sphinx-book-theme>=0.2.0; extra == "docs"
 Requires-Dist: numpydoc>=1.2.1; extra == "docs"
 Requires-Dist: myst_nb>=0.13.1; extra == "docs"
 Requires-Dist: sphinx_design>=0.4.1; extra == "docs"
-
-![Documentation](https://github.com/florence-bockting/example-project/actions/workflows/docs.yml/badge.svg)
-![Tests](https://github.com/florence-bockting/example-project/actions/workflows/tests.yml/badge.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
-
-# Example project 
-
-This is an example project. 
-
-## Install
-will follow
-
-## Usage
-will follow
-
-## Contributing
-will follow
-
-## License 
-will follow

@@ -7,8 +7,6 @@ example_project/__init__.py
 example_project/download_data.py
 example_project/expectation.py
 example_project/politeness_data.py
-example_project/py.typed
-example_project/usage_example.py
 example_project.egg-info/PKG-INFO
 example_project.egg-info/SOURCES.txt
 example_project.egg-info/dependency_links.txt

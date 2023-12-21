@@ -15,7 +15,6 @@ myst_nb>=0.13.1
 sphinx_design>=0.4.1
 
 [testing]
-flake8>=3.9
 tox>=3.24
 pytest>=6.0
 pytest-cov>=2.10.0

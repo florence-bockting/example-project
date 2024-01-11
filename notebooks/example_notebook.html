@@ -335,6 +335,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\flobo\OneDrive\Dokumente\Phd-teaching\IntroPython\example-project\examples\data
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="preprocess-data">
@@ -361,10 +366,10 @@ shape: (4, 3)
 │ ---      ┆ ---    ┆ ---        │
 │ str      ┆ str    ┆ f64        │
 ╞══════════╪════════╪════════════╡
+│ inf      ┆ M      ┆ 144.490476 │
+│ pol      ┆ M      ┆ 132.98     │
 │ pol      ┆ F      ┆ 233.285714 │
 │ inf      ┆ F      ┆ 260.685714 │
-│ pol      ┆ M      ┆ 132.98     │
-│ inf      ┆ M      ┆ 144.490476 │
 └──────────┴────────┴────────────┘
  
 Excerpt data set
@@ -393,11 +398,15 @@ shape: (4, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\flobo\OneDrive\Dokumente\Phd-teaching\IntroPython\example-project\example_project\politeness_data.py:97: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\flobo\OneDrive\Dokumente\Phd-teaching\example-project\example_project\politeness_data.py:98: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
   axs.set_xticklabels(labels = [&quot;Female&quot;, &quot;Male&quot;])
 </pre></div>
 </div>
-<img alt="../_images/d3abce3f87f931df209fd47c41f755bf88f504eb4a3382e6bfe7cc90bafdb383.png" src="../_images/d3abce3f87f931df209fd47c41f755bf88f504eb4a3382e6bfe7cc90bafdb383.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 640x480 with 1 Axes&gt;,
+ &lt;Axes: xlabel=&#39;gender&#39;, ylabel=&#39;pitch in Hz&#39;&gt;)
+</pre></div>
+</div>
+<img alt="../_images/c2f7d05c4c091b2711250af4c1c63241fd8bfe19bb38f22c7b9d8a888dd831a0.png" src="../_images/c2f7d05c4c091b2711250af4c1c63241fd8bfe19bb38f22c7b9d8a888dd831a0.png" />
 </div>
 </div>
 </section>

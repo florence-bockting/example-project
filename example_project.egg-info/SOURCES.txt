@@ -2,7 +2,6 @@ LICENSE.txt
 README.md
 pyproject.toml
 setup.cfg
-setup.py
 example_project/__init__.py
 example_project/download_data.py
 example_project/expectation.py
